@@ -27,6 +27,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -251,19 +252,29 @@ fun SplashScreen(
                     .weight(0.40f),
                 contentAlignment = Alignment.TopCenter
             ) {
-                if (isLoading) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(24.dp),
-                        strokeWidth = 2.dp
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(
+                        dimensionResource(R.dimen.spacing_small)
                     )
-                } else if (showLoginButtons) {
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.spacedBy(
-                            dimensionResource(R.dimen.spacing_small)
-                        )
+                ) {
+                    Button(
+                        modifier = Modifier.width(dimensionResource(R.dimen.width_button)),
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
+                        onClick = {
+                            onNavigateTo(Destination.Main(1))
+                        }
                     ) {
-                        Button(
+                        Text("🎮 Entrar a yStore Juegos")
+                    }
+
+                    if (isLoading) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(24.dp),
+                            strokeWidth = 2.dp
+                        )
+                    } else if (showLoginButtons) {
+                        OutlinedButton(
                             modifier = Modifier.width(dimensionResource(R.dimen.width_button)),
                             enabled = !anonymousLoading && !googleLoading && isOnline,
                             onClick = {

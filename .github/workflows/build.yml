@@ -1,4 +1,4 @@
-name: Build yStore APK
+name: Build and Release yStore APK
 
 on:
   push:
@@ -17,10 +17,10 @@ concurrency:
 
 jobs:
   build:
-    name: Build APKs
+    name: Build & Release APK
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
 
     steps:
       - name: Checkout Code
@@ -53,16 +53,47 @@ jobs:
         run: |
           ./gradlew assembleVanillaRelease assembleVanillaDebug --stacktrace
 
-      - name: Upload Release APK
+      - name: Prepare APK Files for Release
+        run: |
+          mkdir -p release-artifacts
+          cp app/build/outputs/apk/vanilla/release/*-release.apk release-artifacts/yStore-v4.8.4-release.apk 2>/dev/null || cp app/build/outputs/apk/vanilla/release/*.apk release-artifacts/yStore-v4.8.4-release.apk
+          cp app/build/outputs/apk/vanilla/debug/*-debug.apk release-artifacts/yStore-v4.8.4-debug.apk 2>/dev/null || cp app/build/outputs/apk/vanilla/debug/*.apk release-artifacts/yStore-v4.8.4-debug.apk
+          ls -la release-artifacts/
+
+      - name: Upload Release Artifact
         uses: actions/upload-artifact@v4
         with:
           name: yStore-Release-APK
-          path: app/build/outputs/apk/vanilla/release/*.apk
+          path: release-artifacts/yStore-v4.8.4-release.apk
           if-no-files-found: error
 
-      - name: Upload Debug APK
+      - name: Upload Debug Artifact
         uses: actions/upload-artifact@v4
         with:
           name: yStore-Debug-APK
-          path: app/build/outputs/apk/vanilla/debug/*.apk
+          path: release-artifacts/yStore-v4.8.4-debug.apk
           if-no-files-found: error
+
+      - name: Publish to GitHub Releases
+        if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main') && github.event_name != 'pull_request'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v4.8.4
+          name: "yStore v4.8.4 - Catálogo F-Droid + itch.io"
+          body: |
+            ### 🎮 yStore v4.8.4 - Edición Catálogo de Juegos
+
+            • **Nombre de la App:** yStore
+            • **App ID:** `y.Store`
+            • **Novedades en esta versión:**
+              - 🌟 **Catálogo Unificado**: Acceso a juegos agregados de F-Droid e itch.io.
+              - 🔥 **Sección Hot**: Selección de juegos populares con verificación estricta de APKs Android.
+              - 📥 **Descarga Directa de APKs**: Botón para descargar e instalar APKs directamente.
+              - 👥 **Juegos Comunitarios**: Soporte para juegos publicados mediante GitHub y escaneados con VirusTotal.
+              - ⚡ **Entrada Rápida**: Botón para ingresar directamente a los juegos sin requerir cuenta Google Play.
+              - ⚙️ **Configuración de Servidor**: Posibilidad de conectar a tu propio backend FastAPI.
+          files: |
+            release-artifacts/yStore-v4.8.4-release.apk
+            release-artifacts/yStore-v4.8.4-debug.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

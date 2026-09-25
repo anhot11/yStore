@@ -45,6 +45,7 @@ import com.aurora.store.compose.composable.TrackerUpdateWarningDialog
 import com.aurora.store.compose.composition.LocalNetworkStatus
 import com.aurora.store.compose.navigation.Destination
 import com.aurora.store.compose.ui.apps.AppsGamesScreen
+import com.aurora.store.compose.ui.ystore.YStoreCatalogScreen
 import com.aurora.store.compose.ui.commons.MoreSheet
 import com.aurora.store.compose.ui.commons.NetworkScreen
 import com.aurora.store.compose.ui.sheets.AppUpdateSheet
@@ -75,7 +76,7 @@ private enum class MainTab(
 
 @Composable
 fun MainScreen(
-    initialTab: Int = 0,
+    initialTab: Int = 1,
     mainViewModel: MainViewModel = hiltViewModel(),
     updatesViewModel: UpdatesViewModel = hiltViewModel(),
     notificationsViewModel: NotificationsViewModel = hiltViewModel(),
@@ -259,10 +260,7 @@ fun MainScreen(
                         pageType = 0,
                         onNavigateTo = onNavigateTo
                     )
-                    MainTab.GAMES -> AppsGamesScreen(
-                        pageType = 1,
-                        onNavigateTo = ::handleNavigation
-                    )
+                    MainTab.GAMES -> YStoreCatalogScreen()
                     MainTab.UPDATES -> {
                         UpdatesScreen(
                             viewModel = updatesViewModel,
