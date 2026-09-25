@@ -15,13 +15,9 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -96,16 +92,16 @@ fun YStoreCatalogScreen(
                 },
                 actions = {
                     IconButton(onClick = { showSearch = !showSearch }) {
-                        Icon(Icons.Default.Search, contentDescription = "Buscar")
+                        Icon(painter = painterResource(R.drawable.ic_round_search), contentDescription = "Buscar")
                     }
                     IconButton(onClick = { loadGames() }) {
-                        Icon(Icons.Default.Refresh, contentDescription = "Recargar")
+                        Icon(painter = painterResource(R.drawable.ic_refresh), contentDescription = "Recargar")
                     }
                     IconButton(onClick = { showPublishInfoDialog = true }) {
-                        Icon(Icons.Default.Info, contentDescription = "Publicar")
+                        Icon(painter = painterResource(R.drawable.ic_menu_about), contentDescription = "Publicar")
                     }
                     IconButton(onClick = { showSettingsDialog = true }) {
-                        Icon(Icons.Default.Settings, contentDescription = "Configurar Servidor")
+                        Icon(painter = painterResource(R.drawable.ic_menu_settings), contentDescription = "Configurar Servidor")
                     }
                 }
             )
