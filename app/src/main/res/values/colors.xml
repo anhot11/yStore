@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2021 Aurora OSS
+  ~ SPDX-License-Identifier: GPL-3.0-or-later
+  -->
+<resources>
+    <!--Common Colors-->
+    <color name="colorAccent">#6C63FF</color>
+    <color name="ic_launcher_background">#6C63FF</color>
+</resources>
