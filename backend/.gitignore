@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+cache/*.png
+cache/*.jpg
+cache/*.jpeg
+cache/*.webp
+cache/*.gif
+cache/*.apk
+cache/fdroid_games_cache.json
+cache/registry.json
+cache/*.downloading
+cache/*.tmp

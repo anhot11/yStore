@@ -1,0 +1,155 @@
+{
+  "repo": {
+    "address": "https://f-droid.org/repo",
+    "name": {
+      "en-US": "F-Droid"
+    }
+  },
+  "packages": {
+    "org.antigravity.game2048": {
+      "metadata": {
+        "added": 1670000000000,
+        "categories": ["Games", "Puzzle"],
+        "name": {
+          "en-US": "2048 Open Source"
+        },
+        "summary": {
+          "en-US": "Classic 2048 puzzle game for Android."
+        },
+        "description": {
+          "en-US": "Join the numbers and get to the 2048 tile! Swipe in any direction to move tiles."
+        },
+        "authorName": "Gabriele Cirulli",
+        "icon": {
+          "en-US": {
+            "name": "/org.antigravity.game2048/en-US/icon.png",
+            "sha256": "9b71d224bd62f3785d96d46ad3ea3d73319bfbc2890caadae2dff72519673ca7"
+          }
+        },
+        "screenshots": {
+          "phone": {
+            "en-US": [
+              {
+                "name": "/org.antigravity.game2048/en-US/phoneScreenshots/1.png"
+              },
+              {
+                "name": "/org.antigravity.game2048/en-US/phoneScreenshots/2.png"
+              }
+            ]
+          }
+        }
+      },
+      "versions": {
+        "v1": {
+          "added": 1675000000000,
+          "file": {
+            "name": "/org.antigravity.game2048_100.apk",
+            "sha256": "a1b2c3d4e5f6",
+            "size": 2500000
+          },
+          "manifest": {
+            "versionCode": 100,
+            "versionName": "1.0.0"
+          }
+        }
+      }
+    },
+    "com.example.actiongame": {
+      "metadata": {
+        "added": 1680000000000,
+        "categories": ["Games", "Action"],
+        "name": {
+          "en-US": "Super Space Fighter"
+        },
+        "summary": {
+          "en-US": "Fast paced retro arcade space shooter."
+        },
+        "description": {
+          "en-US": "Defend the galaxy against waves of alien invaders in this retro arcade shooter."
+        },
+        "authorName": "RetroDevs Studio",
+        "icon": {
+          "en-US": {
+            "name": "/com.example.actiongame/en-US/icon.png"
+          }
+        },
+        "screenshots": {
+          "phone": {
+            "en-US": [
+              {
+                "name": "/com.example.actiongame/en-US/phoneScreenshots/shoot1.png"
+              }
+            ]
+          }
+        }
+      },
+      "versions": {
+        "v1": {
+          "added": 1681000000000,
+          "file": {
+            "name": "/com.example.actiongame_10.apk",
+            "sha256": "f6e5d4c3b2a1",
+            "size": 5200000
+          },
+          "manifest": {
+            "versionCode": 10,
+            "versionName": "0.1.0"
+          }
+        },
+        "v2": {
+          "added": 1682000000000,
+          "file": {
+            "name": "/com.example.actiongame_20.apk",
+            "sha256": "998877665544",
+            "size": 5300000
+          },
+          "manifest": {
+            "versionCode": 20,
+            "versionName": "0.2.0"
+          }
+        }
+      }
+    },
+    "org.nonprofit.newsreader": {
+      "metadata": {
+        "added": 1650000000000,
+        "categories": ["News & Weather", "Internet"],
+        "name": {
+          "en-US": "Open News"
+        },
+        "summary": {
+          "en-US": "An open source RSS and Atom news feed reader."
+        },
+        "description": {
+          "en-US": "Read articles offline without ads or trackers."
+        },
+        "authorName": "OpenSource Foundation"
+      },
+      "versions": {
+        "v1": {
+          "added": 1655000000000,
+          "file": {
+            "name": "/org.nonprofit.newsreader_5.apk"
+          }
+        }
+      }
+    },
+    "org.minimal.chess": {
+      "metadata": {
+        "added": 1690000000000,
+        "categories": ["Games", "Board"],
+        "name": {
+          "en-US": "Minimal Chess"
+        },
+        "summary": {
+          "en-US": "Simple clean chess engine."
+        },
+        "description": {
+          "en-US": "Play chess against AI or pass-and-play with a friend."
+        },
+        "authorName": "ChessMaster"
+      },
+      "versions": {}
+    }
+  }
+}
