@@ -10,5 +10,7 @@ cache/*.gif
 cache/*.apk
 cache/fdroid_games_cache.json
 cache/registry.json
+cache/ystore.db*
+cache/staging/
 cache/*.downloading
 cache/*.tmp
