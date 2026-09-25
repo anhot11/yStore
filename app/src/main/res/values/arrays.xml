@@ -22,48 +22,30 @@
     </string-array>
 
     <string-array name="link_urls">
-        <item>https://auroraoss.com/</item>
-        <item>https://gitlab.com/AuroraOSS/AuroraStore/-/wikis/home</item>
-        <item>"https://xdaforums.com/t/app-5-0-aurora-store-open-source-google-play-client.3739733/"</item>
-        <item>"https://t.me/AuroraSupport"</item>
-        <item>"https://gitlab.com/AuroraOSS/AuroraStore"</item>
-        <item>"https://f-droid.org/packages/com.aurora.store/"</item>
-        <item>"bc1qu7cy9fepjj309y4r2x3rymve7mw4ff39c8cpe0"</item>
-        <item>"qpqus3qdlz8guf476vwz0fjl8s34fseukcmrl6eknl"</item>
-        <item>"0x6977446933EC8b5964D921f7377950992337B1C6"</item>
-        <item>"upi://pay?pa=whyorean@dbs&amp;pn=whyorean&amp;tn=AuroraOSS"</item>
-        <item>"https://paypal.me/AuroraDev"</item>
-        <item>"https://liberapay.com/on/gitlab/whyorean/ "</item>
+        <item>https://github.com/anhot11/yStore</item>
+        <item>https://github.com/anhot11/yStore/releases</item>
+        <item>https://github.com/anhot11/yStore</item>
+        <item>https://github.com/anhot11/yStore/blob/master/LICENSE</item>
+        <item>https://github.com/anhot11/yStore/blob/master/POLICY.md</item>
+        <item>https://github.com/anhot11/yStore/blob/master/DISCLAIMER.md</item>
     </string-array>
 
     <string-array name="link_titles">
         <item>@string/title_about</item>
-        <item>@string/about_wiki_title</item>
-        <item>@string/about_xda</item>
-        <item>@string/about_telegram</item>
-        <item>@string/about_gitlab</item>
-        <item>@string/about_fdroid</item>
-        <item>@string/about_bitcoin_btc</item>
-        <item>@string/about_bitcoin_bch</item>
-        <item>@string/about_bitcoin_eth</item>
-        <item>@string/about_bhim</item>
-        <item>@string/about_paypal</item>
-        <item>@string/about_libera</item>
+        <item>@string/title_updates</item>
+        <item>@string/source_code_title</item>
+        <item>@string/menu_license</item>
+        <item>@string/privacy_policy_title</item>
+        <item>@string/menu_disclaimer</item>
     </string-array>
 
     <string-array name="link_subtitle">
         <item>@string/about_aurora_store_subtitle</item>
-        <item>@string/about_wiki_summary</item>
-        <item>@string/about_xda_summary</item>
-        <item>@string/about_telegram_summary</item>
-        <item>@string/about_gitlab_summary</item>
-        <item>@string/about_fdroid_summary</item>
-        <item>@string/about_bitcoin_btc_summary</item>
-        <item>@string/about_bitcoin_bch_summary</item>
-        <item>@string/about_bitcoin_eth_summary</item>
-        <item>@string/about_bhim_summary</item>
-        <item>@string/about_paypal_summary</item>
-        <item>@string/about_libera_summary</item>
+        <item>@string/updates_self_desc</item>
+        <item>@string/source_code_subtitle</item>
+        <item>@string/license_subtitle</item>
+        <item>@string/privacy_policy_subtitle</item>
+        <item>@string/disclaimer_subtitle</item>
     </string-array>
 
     <string-array name="pref_theme_style">

@@ -1,9 +1,20 @@
-# yStore
+<p align="center">
+  <img src="icon.png" width="160" height="160" alt="yStore Icon" />
+</p>
+
+<h1 align="center">yStore</h1>
+
+<p align="center">
+  <b>The official open-source Play Store client for Android</b>
+</p>
+
+---
 
 **yStore** is an open-source, alternative client for the Google Play Store designed with modern Material 3 guidelines. It allows users to search, download, and update Android applications with privacy and ease.
 
 - **App Name:** yStore
 - **Application ID (Package Name):** `y.Store`
+- **Icon:** Official yStore icon
 - **License:** GPL-3.0
 
 ---
